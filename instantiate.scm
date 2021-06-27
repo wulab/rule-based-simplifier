@@ -1,6 +1,13 @@
 (load "global.scm")
 (load "dict.scm")
 
+;; SKELETON INSTANTIATION
+;;
+;; foo     instantiates to itself
+;; (f a b) instantiates to a list of 3 elements
+;;         results of instantiating each of f, a, b
+;; (: x)   instantiates to the value of x in the pattern matched
+
 (define (instantiate skeleton dict)
   (define (loop s)
     (cond ((atom? s) s)
